@@ -7,13 +7,15 @@ use crossterm::{
 
 fn main() {
     let f = 'f';
-    let fric = "fric";
+    let fruit = "fruit";
+
     execute!(
         stdout(),
-        PrintStyledContent(fric.underlined())
+        PrintStyledContent(f.green().bold())
     ).unwrap();
+
     execute!(
         stdout(),
-        PrintStyledContent(f.red().underlined().bold())
+        PrintStyledContent(fruit.red().underlined())
     ).unwrap();
 }
